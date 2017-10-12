@@ -1,19 +1,30 @@
 /* Custom CSS */
 /* STEP 2a: Use Google Web Fonts API to attach the "Lobster" font - note that there are two methods: Standard and @import (https://fonts.google.com/) */
-
+@import url('https://fonts.googleapis.com/css?family=Lobster');
 /* /* STEP 3a: Use the font face kit at Font Squirrel to generate @font-face for HoneyScript Light (https://www.dafont.com/Honey-Script.font) - Read the legal disclaimer at the bottom of the home page - it is your legal responsibility to check the terms of use for fonts (open the generated stylesheet.css) */
-
+@font-face {
+    font-family: 'HoneyScript Light';
+    src: url('../fonts/honeyscript-light-webfont.woff2') format('woff2'),
+         url('../fonts/honeyscript-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 /* STEP 4a: Use the font face kit at Font Squirrel to generate @font-face for "Komika Title Regular" (https://www.fontsquirrel.com/fonts/komika-title) - a better fit than "Lobster" - only generate the WOFF and WOFF2 versions of the font */
-
+@font-face {
+    font-family: 'Komika Title Regular';
+    src: url('../fonts/KomikaTitle-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 /* STEP 5: Use the provided font, "Sign Painter Upright" for the author's name, and for the title of the book as they are the precise font used in the book cover design - please don't use this font outside of this class, as we have purchased a license for the educational use of this font only within the scope of this particular class (https://houseind.com/hi/signpainter) */
 
 /* STEP 5a: Create the @font-face rule for "Sign Painter Upright" */
 @font-face {
 		font-family: 'Sign Painter Upright';
 		src: url('../fonts/SignPainter-HouseUpright.AH.woff') format('woff2'),
-				url('../fonts/SignPainter-HouseUpright.AH.woff2') format('woff');
-				font-weight: 400;
-				font-stretch: normal;
+			 url('../fonts/SignPainter-HouseUpright.AH.woff2') format('woff');
+			 font-weight: 400;
+			 font-stretch: normal;
 }
 * {
 	margin: 0;
@@ -22,10 +33,10 @@
 html	{
 	height: 100%;
 	background: #ddd;
+	/* STEP 1: Set base font settings to 120% font-size, 1.4 line-height, Futura (font-style, font-variant, font-weight, font-size, line-height, and font-family) (https://developer.mozilla.org/en-US/docs/Web/CSS/font) */
+	font: normal normal 120%/1.4 Futura, Helvetica, Arial, sans-serif;
 }
 body {
-	/* STEP 1: Set base font settings to 120% font-size, 1.4 line-height, Futura (font-style, font-variant, font-weight, font-size, line-height, and font-family) (https://developer.mozilla.org/en-US/docs/Web/CSS/font) */
-
 	color: #111;
 	width: 480px;
 	margin: 0 auto;
@@ -48,16 +59,16 @@ header p:first-child, header address {
 }
 header address {
 	/* STEP 2b: Set "Lobster" as the first in the font stack for the author's name */
-	font-family: Impact, Arial, sans-serif;
+	font-family: 'Sign Painter Upright', Impact, Arial, sans-serif;
 	/* STEP 5b: Replace "Lobster" above with "Sign Painter Upright" as the first font in the stack */
 	/* STEP 5d: Size up the font to emulate the original design - note the difference between em and rem (root em) */
-	font-size: 4em;
+	font-size: 6.25rem;
 	font-weight: normal;
 	font-style: normal;
 	letter-spacing: 0.1em;
 	color: #eee;
 	text-shadow: 6px 4px 1px #000;
-	height: 1.25em;
+	height: 7.75rem;
 	font-kerning: normal;
 	text-rendering: optimizeLegibility;
 }
@@ -77,7 +88,7 @@ header p:nth-of-type(2) em {
 }
 header h1 {
 	/* STEP 3b: Set "HoneyScript Light" as the first font in the stack for header h1 */
-	font-family: Impact, Arial, sans-serif;
+	font-family: 'HoneyScript Light',Impact, Arial, sans-serif;
 	font-size: 3.3em;
 	font-weight: normal;
 	line-height: 0.9;
@@ -86,14 +97,14 @@ header h1 {
 header h1 strong {
 	display: block;
 	/* STEP 5c: Set "Sign Painter Upright" as the first font in the stack */
-	font-family: Impact, Arial, sans-serif;
-	font-size: 3em;
+	font-family: 'Sign Painter Upright', Impact, Arial, sans-serif;
+	font-size: 5.20rem;
 	letter-spacing: 0.05em;
 	font-weight: normal;
 }
 header h1 em{
 	/* STEP 4b: Set "Komika Title Regular" as the first font in the stack for the phrase "A Memoir" */
-	font-family: Impact, Arial, sans-serif;
+	font-family: 'Komika Title Regular', Impact, Arial, sans-serif;
 	font-style: normal;
 	color: rgb(212, 0, 31);
 	font-size: 0.4em;
