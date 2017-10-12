@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Century Condensed Bold';
+    src: url('../fonts/century_condensed_bold-webfont.woff2') format('woff2'),
+         url('../fonts/century_condensed_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    font: normal normal 120%/1.4 'Century Condensed Bold', Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+span.line {
+    border-bottom: 5px solid #8b2942;
+}
+
+span.first-letter {
+    font-size: 4rem;
+}
+
+span.letter_V {
+    position: relative;
+    left: 1rem;
+}
